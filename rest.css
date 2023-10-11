@@ -1,0 +1,101 @@
+html, body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom right, #2c3e50, #6c5b7b, #c06c84);
+    height: 100vh;
+}
+
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes sway {
+    0%, 20%, 50%, 80%, 100% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(6deg);
+    }
+    60% {
+        transform: rotate(-6deg);
+    }
+}
+.sakura {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation-name: fall, sway;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    z-index: 1000;
+    transform: translateY(-100%);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1), ease-in-out;
+}
+
+.sakura1 {
+    left: 10%;
+    animation-duration: 5s, 3s;
+    animation-delay: 1s;
+}
+
+.sakura2 {
+    left: 30%;
+    animation-duration: 6s, 4s;
+    animation-delay: 2s;
+}
+
+.sakura3 {
+    left: 50%;
+    animation-duration: 8s, 5s;
+    animation-delay: 0s;
+}
